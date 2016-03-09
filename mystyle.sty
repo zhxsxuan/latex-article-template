@@ -1,0 +1,113 @@
+\usepackage[headheight=14pt]{geometry}
+% ---------------------------
+% packages
+% ---------------------------
+% AMS math symbol
+\usepackage{amsmath}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{mathrsfs}
+%\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{algorithmic, algorithm}
+\usepackage{bm}
+
+% text fonts
+\usepackage{txfonts}
+%\usepackage{helvet}         % selects Helvetica as sans-serif font
+%\usepackage{courier}        % selects Courier as typewriter font
+\usepackage[latin1]{inputenc}
+
+
+% 
+
+% graphcis
+\usepackage{graphicx}
+\usepackage{subfigure} 
+
+\usepackage{tikz}   
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,matrix,calc} 
+
+% other tools
+\usepackage{hyperref}
+\usepackage{type1cm}       
+%%\usepackage[normalem]{ulem}
+\usepackage{soul}
+%\usepackage{times}
+\usepackage{url}
+\usepackage{rotating} 
+\usepackage{makeidx}
+\makeindex             
+\usepackage{multirow}
+\usepackage{multicol}   
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{comment} 
+\usepackage{etoolbox}
+
+%% 
+% ---------------------------
+% Formats
+% ---------------------------
+% head
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\leftmark}       % Chapter name on the top left.
+\rhead{}                % Add author name here
+% page
+\pagenumbering{arabic}
+
+% ---------------------------
+% Theorems etc.
+% ---------------------------
+\ifcsmacro{theorem}{}{
+\newtheorem{theorem}{Theorem}[section]
+}
+\ifcsmacro{lemma}{}{
+\newtheorem{lemma}[theorem]{Lemma}
+}
+\ifcsmacro{corollary}{}{
+\newtheorem{corollary}[theorem]{Corollary}
+}
+\ifcsmacro{proposition}{}{
+\newtheorem{proposition}[theorem]{Proposition}
+}
+%\ifcsmacro{assumption}{}{
+%\newtheorem{assumption}[theorem]{Assumption}
+%}
+\newtheorem{assumption}{Assumption}
+\renewcommand\theassumption{A\arabic{assumption}}
+%\newtheorem{consequence}[equation]{Consequence}
+%\newtheorem{conclusion}[equation]{Conclusion}
+\newcommand{\Remark}{\noindent{\bf Remark.~}}
+%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{exercise}[theorem]{Exercise}
+%\newtheorem{example}[theorem]{Example}
+
+
+\def\proof{\par{\it Proof}. \ignorespaces}
+\def\endproof{{\ \vbox{\hrule\hbox{\vrule
+        height1.3ex\hskip0.8ex\vrule}\hrule}}\par}
+        
+% ---------------------------
+% Chapter and sections
+% ---------------------------
+\let\oldchapter\chapter
+\def\chapter{%
+  \setcounter{exercise}{0}%
+  \oldchapter
+}
+
+
+
+
+
+
+
+
+
+
+
+
